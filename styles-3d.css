@@ -1,0 +1,31 @@
+body {
+    perspective: 1000px;
+}
+
+.container {
+    transform: rotateY(10deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.container:hover {
+    transform: rotateY(0deg);
+}
+
+.item {
+    transform: translateZ(30px);
+    transition: transform 0.5s;
+}
+
+.item:hover {
+    transform: translateZ(60px);
+}
+
+button {
+    transform: translateZ(20px);
+    transition: transform 0.5s;
+}
+
+button:hover {
+    transform: translateZ(40px);
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-3d.css">
+    <style>
+        /* Additional styling for enhanced layout */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #2c3e50;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            width: 100%;
+            text-align: center;
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 1rem 0;
+        }
+        .container {
+            background: #ecf0f1;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        #display {
+            width: 100%;
+            padding: 1rem;
+            font-size: 2rem;
+            text-align: right;
+            margin-bottom: 1rem;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+        #buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+        .btn {
+            padding: 1rem;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            background: #bdc3c7;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .btn:active {
+            background: #95a5a6;
+            transform: scale(0.95);
+        }
+        .btn-advanced {
+            background: #e74c3c;
+            color: #ecf0f1;
+        }
+        .btn-advanced:active {
+            background: #c0392b;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            #display {
+                font-size: 1.5rem;
+                padding: 0.75rem;
+            }
+            .btn {
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Professional Casio Calculator</h1>
+    </header>
+    <div class="container">
+        <div id="calculator">
+            <input type="text" id="display" disabled>
+            <input type="hidden" id="storedValue">
+            <div id="buttons">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">*</button>
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">-</button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button class="btn">=</button>
+                <button class="btn">+</button>
+                <button class="btn">C</button>
+                <button class="btn">%</button>
+                <button class="btn btn-advanced">√</button>
+                <button class="btn btn-advanced">x²</button>
+                <button class="btn">1/x</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Calculator Inc.</p>
+    </footer>
+    <script src="calculator.js"></script>
+</body>
+</html>
